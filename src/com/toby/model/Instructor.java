@@ -66,7 +66,7 @@ public class Instructor {
 	@Override
 	public String toString() {
 		return "Instructor [ID=" + ID + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", instructorDetailID=" + instructorDetail + "]";
+				+ ", instructorDetail=" + instructorDetail + "]";
 	}
 
 	public void setLastName(String lastName) {

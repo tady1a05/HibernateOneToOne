@@ -48,7 +48,7 @@ public class InstructorDetail {
 
 	@Override
 	public String toString() {
-		return "InstructorDetail [ID=" + ID + ", instructor=" + instructor + ", youtubeChannel=" + youtubeChannel
+		return "InstructorDetail [ID=" + ID + ", instructor ID=" + instructor.getID() + ", instructor Name=" + instructor.getFirstName() + " " + instructor.getLastName() + ", youtubeChannel=" + youtubeChannel
 				+ ", hobby=" + hobby + "]";
 	}
 
