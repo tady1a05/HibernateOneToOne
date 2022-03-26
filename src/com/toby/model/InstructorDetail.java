@@ -48,7 +48,8 @@ public class InstructorDetail {
 
 	@Override
 	public String toString() {
-		return "InstructorDetail [ID=" + ID + ", youtubeChannel=" + youtubeChannel + ", hobby=" + hobby + "]";
+		return "InstructorDetail [ID=" + ID + ", instructor=" + instructor + ", youtubeChannel=" + youtubeChannel
+				+ ", hobby=" + hobby + "]";
 	}
 
 	public void setID(String iD) {
