@@ -24,17 +24,18 @@ public class JdbcSave {
 			session.beginTransaction();
 			session.save(ins);
 			session.getTransaction().commit();
-						
-			/*session.beginTransaction();
-			
-			Instructor ins = session.get(Instructor.class,"1");
-
-			
-			if(ins != null) {
-				session.delete(ins);
-			}
-			
-			session.getTransaction().commit();*/
+			/**                                        **/
+			Session session2 = factory.getCurrentSession();
+			session2.beginTransaction();
+			InstructorDetail ins1 = session2.get(InstructorDetail.class,"1");
+			System.out.println(ins1.getInstructor());
+			session2.getTransaction().commit();
+			/**                                        **/
+			Session session3 = factory.getCurrentSession();
+			session3.beginTransaction();
+			Instructor ins2 = session3.get(Instructor.class,"1");			
+			System.out.println(ins2.getInstructorDetail());
+			session3.getTransaction().commit();
 
 		}finally {
 			factory.close();

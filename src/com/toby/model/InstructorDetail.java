@@ -1,10 +1,12 @@
 package com.toby.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -23,6 +25,9 @@ public class InstructorDetail {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String ID;
 	
+	@OneToOne(mappedBy="instructorDetail",cascade=CascadeType.ALL)
+	private Instructor instructor;
+	
 	@Column(name="youtube_channel")
 	private String youtubeChannel;
 	
@@ -31,6 +36,14 @@ public class InstructorDetail {
 
 	public String getID() {
 		return ID;
+	}
+
+	public Instructor getInstructor() {
+		return instructor;
+	}
+
+	public void setInstructor(Instructor instructor) {
+		this.instructor = instructor;
 	}
 
 	@Override
